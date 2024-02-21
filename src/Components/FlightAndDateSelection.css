@@ -1,0 +1,69 @@
+.flight-form-container {
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flight-form-header {
+  margin-bottom: 20px;
+}
+
+.flight-form{
+  background-color: #1b1b6c;
+  height: 12vh;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-field {
+  flex: 1;
+  padding: 0 0 0 5px;
+  color: #fff;
+}
+
+.form-label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #fff;
+}
+
+.form-input,
+.form-input select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  background-color: #fff;
+  height: 40px; /* Adjust the height as needed */
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-button {
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
