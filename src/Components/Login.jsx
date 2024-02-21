@@ -5,11 +5,11 @@ import { useState } from "react";
 import "./Login.css";
 
 export default function Login() {
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [data, setData] = useState({ email: "", password: "" });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -17,8 +17,15 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log("Form data:", data);
+    if (data.password.length < 8) {
+      console.log("Password must be at least 8 characters long.");
+      alert("Password must be at least 8 characters long.");
+      return;
+    }
+    console.log("Form submitted successfully.");
   };
+  
 
   return (
     <div className="login-container">
@@ -34,7 +41,7 @@ export default function Login() {
           <Input
             id="email"
             name="email"
-            value={formData.email}
+            value={data.email}
             onChange={handleInputChange}
             placeholder="m@example.com"
             required
@@ -49,14 +56,14 @@ export default function Login() {
           <Input
             id="password"
             name="password"
-            value={formData.password}
+            value={data.password}
             onChange={handleInputChange}
             required
             type="password"
             className="form-input"
           />
         </div>
-        {formData.email && formData.password ? (
+        {data.email && data.password ? (
           <Button type="submit" className="submit-button" variant="contained" >
             <Link
               to="/FlightAndDateSelection"
