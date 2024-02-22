@@ -1,5 +1,5 @@
 # React + Vite
-
+## All files are inside the src folder
 # Login:
 
 You need to login with your email and password to access the flight search functionality.
